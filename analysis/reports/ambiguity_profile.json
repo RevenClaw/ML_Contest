@@ -1,0 +1,100 @@
+{
+  "sample_reference_entities": 11090,
+  "same_country_normalized_exact_name_pairs": {
+    "false": 96254,
+    "US_false": 82474,
+    "India_false": 13780,
+    "true": 8378,
+    "US_true": 5895,
+    "India_true": 2483
+  },
+  "nonmatch_examples": [
+    {
+      "reference": {
+        "entity_id": "S1-721120800",
+        "business_name": "Summit Inc",
+        "business_address": "1414 Main Road, Enfield, ME",
+        "country": "US"
+      },
+      "nonmatch": {
+        "entity_id": "S2-163963287",
+        "business_name": "Summit Inc",
+        "business_address": "GREENSBORO, NC, 19 1/2 STARDUST TRAIL",
+        "country": "US"
+      }
+    },
+    {
+      "reference": {
+        "entity_id": "S1-57460800",
+        "business_name": "Cobalt LLC",
+        "business_address": "2931 12.8, Ephrata, WA",
+        "country": "US"
+      },
+      "nonmatch": {
+        "entity_id": "S2-294835210",
+        "business_name": "COBALT  (LLC)",
+        "business_address": "NC, CANLER, 110 MEADOWBROOK ACRES",
+        "country": "US"
+      }
+    },
+    {
+      "reference": {
+        "entity_id": "S1-190490800",
+        "business_name": "Division of Sanitation",
+        "business_address": "105 Dewey Street, Prairie City, IA",
+        "country": "US"
+      },
+      "nonmatch": {
+        "entity_id": "S2-401480583",
+        "business_name": "Division of Sanitation",
+        "business_address": "IN, 2178 WILLOW LANE, PERU",
+        "country": "US"
+      }
+    },
+    {
+      "reference": {
+        "entity_id": "S1-607384800",
+        "business_name": "Sai Tech Private Limited",
+        "business_address": "No.54 / 1, Mettupalayam Road, Kavundampalayam, Coimbatore, Tamil Nadu",
+        "country": "India"
+      },
+      "nonmatch": {
+        "entity_id": "S2-298914373",
+        "business_name": "*** Sai Tech Private Limited",
+        "business_address": "A-0342, GAUTAM BUDDHA NAGAR, NOIDA, Uttar Pradesh",
+        "country": "India"
+      }
+    },
+    {
+      "reference": {
+        "entity_id": "S1-411231600",
+        "business_name": "Cancer Project Inc",
+        "business_address": "93 Stone Park Trail, AL, Pike Road",
+        "country": "US"
+      },
+      "nonmatch": {
+        "entity_id": "S2-448967653",
+        "business_name": "CANCER PROJECT INC",
+        "business_address": "611 CHARLESTON MILLS DRIVE, DOTHAN, AL",
+        "country": "US"
+      }
+    }
+  ],
+  "test_countries": {
+    "1": {
+      "US": 663106,
+      "France": 259452,
+      "India": 809986
+    },
+    "2": {
+      "India": 2312565,
+      "France": 703378,
+      "US": 1871330
+    },
+    "3": {
+      "India": 2405000,
+      "France": 731615,
+      "US": 1945701
+    }
+  }
+}

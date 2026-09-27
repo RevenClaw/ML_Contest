@@ -1,0 +1,29 @@
+{
+  "seed": 42,
+  "tune_fraction": 0.1,
+  "audit_fraction": 0.1,
+  "retrieval": {
+    "name_k": 40,
+    "address_k": 40,
+    "joint_k": 30,
+    "gram_k": 30,
+    "exact_k": 100,
+    "query_terms": 10,
+    "max_candidates": 200
+  },
+  "train_negative_limit": 40,
+  "train_hard_negative_limit": 30,
+  "max_references_per_split": null,
+  "num_boost_round": 1500,
+  "early_stopping_rounds": 100,
+  "threads": 8,
+  "device_type": "cpu",
+  "gpu_device_id": 0,
+  "max_bin": 127,
+  "threshold_grid": [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 0.975, 0.99],
+  "trials": [
+    {"num_leaves": 31, "min_data_in_leaf": 100, "learning_rate": 0.05, "lambda_l2": 5.0},
+    {"num_leaves": 63, "min_data_in_leaf": 200, "learning_rate": 0.04, "lambda_l2": 10.0},
+    {"num_leaves": 63, "min_data_in_leaf": 100, "learning_rate": 0.03, "lambda_l2": 20.0, "feature_fraction": 0.85}
+  ]
+}

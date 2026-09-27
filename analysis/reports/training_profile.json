@@ -1,0 +1,348 @@
+{
+  "files": {
+    "train\\train_source1.tsv": {
+      "rows": 2206821,
+      "countries": {
+        "US": 1323633,
+        "India": 883188
+      },
+      "blank_fields": {},
+      "flags": {
+        "address_without_digits": 77037,
+        "non_ascii_address": 554
+      },
+      "lengths": {
+        "business_name": {
+          "mean": 24.03440333402664,
+          "max": 105,
+          "quantiles": {
+            "0.5": 24,
+            "0.9": 34,
+            "0.99": 42
+          }
+        },
+        "business_address": {
+          "mean": 52.06621289175697,
+          "max": 256,
+          "quantiles": {
+            "0.5": 41,
+            "0.9": 90,
+            "0.99": 124
+          }
+        }
+      }
+    },
+    "train\\train_source2.tsv": {
+      "rows": 5034616,
+      "countries": {
+        "India": 2017799,
+        "US": 3016817
+      },
+      "blank_fields": {
+        "business_address": 168967
+      },
+      "flags": {
+        "non_ascii_name": 764608,
+        "address_without_digits": 470941,
+        "non_ascii_address": 478453
+      },
+      "lengths": {
+        "business_name": {
+          "mean": 25.103574930044317,
+          "max": 104,
+          "quantiles": {
+            "0.5": 25,
+            "0.9": 37,
+            "0.99": 48
+          }
+        },
+        "business_address": {
+          "mean": 46.22590858965212,
+          "max": 249,
+          "quantiles": {
+            "0.5": 37,
+            "0.9": 83,
+            "0.99": 118
+          }
+        }
+      }
+    },
+    "train\\train_source3.tsv": {
+      "rows": 5285603,
+      "countries": {
+        "US": 3170056,
+        "India": 2115547
+      },
+      "blank_fields": {
+        "business_address": 175916
+      },
+      "flags": {
+        "address_without_digits": 486306,
+        "non_ascii_name": 606737,
+        "non_ascii_address": 476588
+      },
+      "lengths": {
+        "business_name": {
+          "mean": 25.202143823514554,
+          "max": 123,
+          "quantiles": {
+            "0.5": 25,
+            "0.9": 37,
+            "0.99": 50
+          }
+        },
+        "business_address": {
+          "mean": 46.71443731207206,
+          "max": 240,
+          "quantiles": {
+            "0.5": 42,
+            "0.9": 77,
+            "0.99": 115
+          }
+        }
+      }
+    }
+  },
+  "labels": {
+    "rows": 2206821,
+    "match_count_histogram": {
+      "0": 123247,
+      "1": 119157,
+      "2": 375212,
+      "3": 530841,
+      "4": 484115,
+      "5": 321957,
+      "6": 164868,
+      "7": 63968,
+      "8": 18680,
+      "9": 4205,
+      "10": 534,
+      "11": 37
+    },
+    "pairs_by_source": {
+      "S2": 3693619,
+      "S3": 3944746
+    },
+    "duplicate_lists": 0
+  },
+  "sample": {
+    "selection": "S1 numeric ID modulo 200 equals zero; deterministic approximately 0.5% sample",
+    "entities": 11090,
+    "countries": {
+      "US": 6618,
+      "India": 4472
+    },
+    "pair_stats": {
+      "US": {
+        "pairs": 22992,
+        "same_country": 22992,
+        "exact_business_name": 1303,
+        "normalized_exact_business_name": 5895,
+        "zero_token_overlap_business_name": 1858,
+        "exact_business_address": 527,
+        "normalized_exact_business_address": 2052,
+        "zero_token_overlap_business_address": 1082,
+        "singleton_entities": 346
+      },
+      "India": {
+        "pairs": 15624,
+        "same_country": 15624,
+        "exact_business_name": 412,
+        "normalized_exact_business_name": 2483,
+        "zero_token_overlap_business_name": 3718,
+        "exact_business_address": 325,
+        "normalized_exact_business_address": 1167,
+        "zero_token_overlap_business_address": 632,
+        "singleton_entities": 222
+      }
+    },
+    "jaccard": {
+      "US_business_name": {
+        "mean": 0.6738987354658023,
+        "median": 0.6666666666666666
+      },
+      "US_business_address": {
+        "mean": 0.5548645317004643,
+        "median": 0.5555555555555556
+      },
+      "India_business_name": {
+        "mean": 0.5289182104253464,
+        "median": 0.6
+      },
+      "India_business_address": {
+        "mean": 0.6591984195032049,
+        "median": 0.7142857142857143
+      }
+    },
+    "examples": [
+      {
+        "reference": {
+          "entity_id": "S1-503957000",
+          "business_name": "AP Hospitality Inc",
+          "business_address": "20085 Us 23, Circleville, OH",
+          "country": "US"
+        },
+        "match": {
+          "entity_id": "S2-994658326",
+          "business_name": "AP INC SERVICE #80430",
+          "business_address": "20085 US 23, CIRCLEVILLE, OH",
+          "country": "US"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-503957000",
+          "business_name": "AP Hospitality Inc",
+          "business_address": "20085 Us 23, Circleville, OH",
+          "country": "US"
+        },
+        "match": {
+          "entity_id": "S2-235117490",
+          "business_name": "AP Hospitality Ínc",
+          "business_address": "20085 US 23, CIRCLEVILLE, OH",
+          "country": "US"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-503957000",
+          "business_name": "AP Hospitality Inc",
+          "business_address": "20085 Us 23, Circleville, OH",
+          "country": "US"
+        },
+        "match": {
+          "entity_id": "S2-353308450",
+          "business_name": "AP  Inc Hospitality",
+          "business_address": "20085 US 23, CIRCLEVILLE, OH",
+          "country": "US"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-503957000",
+          "business_name": "AP Hospitality Inc",
+          "business_address": "20085 Us 23, Circleville, OH",
+          "country": "US"
+        },
+        "match": {
+          "entity_id": "S2-173295926",
+          "business_name": "AP Ínc Center",
+          "business_address": "20085 US 23, CIRCLEVILLE, OH",
+          "country": "US"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-503957000",
+          "business_name": "AP Hospitality Inc",
+          "business_address": "20085 Us 23, Circleville, OH",
+          "country": "US"
+        },
+        "match": {
+          "entity_id": "S3-858763214",
+          "business_name": "[Inc] AP Hospitality",
+          "business_address": "20085-20089 Us 23, Circleville, Ohio",
+          "country": "US"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-503957000",
+          "business_name": "AP Hospitality Inc",
+          "business_address": "20085 Us 23, Circleville, OH",
+          "country": "US"
+        },
+        "match": {
+          "entity_id": "S3-555791452",
+          "business_name": "AP AP Hospitality Incorporated",
+          "business_address": "20085-20089 Us 23, Circleville, Ohio",
+          "country": "US"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-591062600",
+          "business_name": "Vishnu Dealer Pvt Ltd",
+          "business_address": "Word No.6 Kantabanji, Kantabanji, Sundargarh, Orissa",
+          "country": "India"
+        },
+        "match": {
+          "entity_id": "S2-478640391",
+          "business_name": "Vishnu Pvt Ltd [Services]",
+          "business_address": "WORD NO.6 KANTABANJI, KANTABANJI, ଓଡ଼ିଶା",
+          "country": "India"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-491658200",
+          "business_name": "Baba Infotech Private Limited",
+          "business_address": "First Floor Shop No. 130, Vasudev Sky High Chs Ltd, Thane, Maharashtra",
+          "country": "India"
+        },
+        "match": {
+          "entity_id": "S2-477831819",
+          "business_name": "बाबा इंफोटेक प्राइवेट लिमिटेड",
+          "business_address": "NO. ##620 FIRST FLOOR SHOP NO. 130, THANE, Maharashtra",
+          "country": "India"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-491658200",
+          "business_name": "Baba Infotech Private Limited",
+          "business_address": "First Floor Shop No. 130, Vasudev Sky High Chs Ltd, Thane, Maharashtra",
+          "country": "India"
+        },
+        "match": {
+          "entity_id": "S2-865814128",
+          "business_name": "BABA INFOTECH LIMITED CENTER",
+          "business_address": "NO. ##620 FIRST FLOOR SHOP NO. 130, VASUDEV SKY HIGH CHS LTD, THANE, Maharashtra",
+          "country": "India"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-491658200",
+          "business_name": "Baba Infotech Private Limited",
+          "business_address": "First Floor Shop No. 130, Vasudev Sky High Chs Ltd, Thane, Maharashtra",
+          "country": "India"
+        },
+        "match": {
+          "entity_id": "S2-593136216",
+          "business_name": "बाबा इंफोटेक प्राइवेट लिमिटेड",
+          "business_address": "NO. ##620 FIRST FLOOR SHOP NO. 130, VASUDEV SKY HIGH CHS LTD, THANE, Maharashtra",
+          "country": "India"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-491658200",
+          "business_name": "Baba Infotech Private Limited",
+          "business_address": "First Floor Shop No. 130, Vasudev Sky High Chs Ltd, Thane, Maharashtra",
+          "country": "India"
+        },
+        "match": {
+          "entity_id": "S3-78071645",
+          "business_name": "Baba-Infotech Private",
+          "business_address": "",
+          "country": "India"
+        }
+      },
+      {
+        "reference": {
+          "entity_id": "S1-697332200",
+          "business_name": "Alpha Constructions Private Limited",
+          "business_address": "Kolkata, Jl Nehru Road, 9Th Floor, R.M. No.-, A-11, Kolkata, Chatterjee International Centre 33A, Howrah, West Bengal",
+          "country": "India"
+        },
+        "match": {
+          "entity_id": "S2-522628160",
+          "business_name": "আলফা কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "business_address": "CHATTERJEE INTERNATIONAL CENTRE 033A, JL NEHRU ROAD, 9TH FLOOR, R.M. NO.-, A-11, KOLKATA, KOLKATA REGION, HOWRAH, West Bengal",
+          "country": "India"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+# Shared by the CPU wheel and the CUDA source build.
+numpy==2.3.5
+rapidfuzz==3.14.3
+anyascii==0.3.3
